@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "920915531830",
+    "firebase_url": "https://pelitahidup-4f6e1.firebaseio.com",
+    "project_id": "pelitahidup-4f6e1",
+    "storage_bucket": "pelitahidup-4f6e1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920915531830:android:be730af8af1925315a6097",
+        "android_client_info": {
+          "package_name": "pelitahidup.gpib.pelitahidup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920915531830-qet2ek171qoieh9hiqrs83r4754a2g6t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "pelitahidup.gpib.pelitahidup",
+            "certificate_hash": "b54f62c962c943c026203b042cea65fabdb1f9fb"
+          }
+        },
+        {
+          "client_id": "920915531830-h2k62ik173dkd3aaembj0eu1h7tm8gvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkSxezV5ejz8EhRU3LLB6Dp8cLh_Zm5ds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920915531830-h2k62ik173dkd3aaembj0eu1h7tm8gvl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
