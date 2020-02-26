@@ -41,7 +41,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:fontFamily="@font/mregular"
-                android:text="PEL-KAT"
+                android:text="GPIB Pelita Hidup Depok"
                 android:textColor="#FFF"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -99,21 +99,7 @@
                 android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/photo_home_user"
                 app:layout_constraintTop_toBottomOf="@+id/nama_lengkap"
-                tools:text="Programmer" />
-
-            <TextView
-                android:id="@+id/user_balance"
-                android:layout_width="wrap_content"
-                android:layout_height="31dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="28dp"
-                android:layout_marginRight="28dp"
-                android:fontFamily="@font/mmedium"
-                tools:text="$ 180"
-                android:textColor="@color/GreenPrimary"
-                android:textSize="22sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                tools:text="Effesus" />
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
@@ -165,7 +151,7 @@
                     android:weightSum="3">
 
                     <LinearLayout
-                        android:id="@+id/btn_ticket_pisa"
+                        android:id="@+id/btn_visimisi"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -175,18 +161,18 @@
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
-                            android:src="@drawable/icon_pa" />
+                            android:src="@drawable/icon_nopic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="ANAK" />
+                            android:text="VISI MISI" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/btn_ticket_torri"
+                        android:id="@+id/btn_jadwalibadah"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -196,18 +182,18 @@
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
-                            android:src="@drawable/icon_pt" />
+                            android:src="@drawable/icon_nopic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="TERUNA" />
+                            android:text="Jadwal Ibadah" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/btn_ticket_pagoda"
+                        android:id="@+id/btn_datajemaat"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -217,13 +203,13 @@
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
-                            android:src="@drawable/icon_gp" />
+                            android:src="@drawable/icon_nopic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="PEMUDA" />
+                            android:text="Data Jemaat" />
 
                     </LinearLayout>
 
@@ -236,7 +222,7 @@
                     android:weightSum="3">
 
                     <LinearLayout
-                        android:id="@+id/btn_ticket_candi"
+                        android:id="@+id/btn_informasi"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -246,18 +232,18 @@
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
-                            android:src="@drawable/icon_pkp" />
+                            android:src="@drawable/icon_nopic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="PEREMPUAN" />
+                            android:text="INFORMASI" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/btn_ticket_sphinx"
+                        android:id="@+id/btn_wartajemaat"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -267,18 +253,18 @@
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
-                            android:src="@drawable/icon_pkb" />
+                            android:src="@drawable/icon_nopic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="BAPAK" />
+                            android:text="Warta Jemaat" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/btn_ticket_monas"
+                        android:id="@+id/btn_sbu"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -288,13 +274,13 @@
                         <ImageView
                             android:layout_width="64dp"
                             android:layout_height="64dp"
-                            android:src="@drawable/icon_pklu" />
+                            android:src="@drawable/icon_nopic" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/mregular"
-                            android:text="LANJUT USIA" />
+                            android:text="SBU" />
 
                     </LinearLayout>
                 </LinearLayout>
