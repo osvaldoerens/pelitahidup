@@ -13,14 +13,14 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        Button btnWlcmSignin = findViewById(R.id.btn_signin);
+        Button btnWlcmSignin = findViewById(R.id.btn_welcomesignin);
         btnWlcmSignin.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.btn_signin:
+            case R.id.btn_welcomesignin:
                 Intent moveMain = new Intent(SignInActivity.this, MainActivity.class);
                 startActivity(moveMain);
                 break;
