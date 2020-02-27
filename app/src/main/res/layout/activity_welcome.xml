@@ -15,7 +15,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="50dp"
-        android:background="@drawable/logogpib"
+        android:background="@drawable/logoph"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

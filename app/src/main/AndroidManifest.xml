@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VisiMisiActivity"></activity>
+        <activity android:name=".SbuActivity"></activity>
+        <activity android:name=".WartaJemaatActivity" />
+        <activity android:name=".InformasiActivity" />
+        <activity android:name=".DataJemaatActivity" />
+        <activity android:name=".JadwalIbadahActivity" />
+        <activity android:name=".VisiMisiActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".SignInActivity" />
         <activity android:name=".MainActivity" />

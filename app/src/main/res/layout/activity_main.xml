@@ -72,7 +72,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
             <TextView
                 android:id="@+id/nama_lengkap"
                 android:layout_width="wrap_content"
@@ -85,7 +84,7 @@
                 android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/photo_home_user"
                 app:layout_constraintTop_toBottomOf="@+id/textView2"
-                tools:text="Osvaldo Erens" />
+                tools:text="Osvaldo Erens"/>
 
             <TextView
                 android:id="@+id/bio"
