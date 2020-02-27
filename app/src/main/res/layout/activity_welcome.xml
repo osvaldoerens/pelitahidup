@@ -8,6 +8,7 @@
     tools:context="pelitahidup.gpib.pelitahidup.WelcomeActivity">
 
     <View
+        android:id="@+id/logogpib"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_marginLeft="30dp"
@@ -37,7 +38,7 @@
         android:id="@+id/intro_app"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="40dp"
         android:fontFamily="@font/mregular"
         android:lineSpacingExtra="9dp"
         android:text="Selamat Datang di GPIB Pelita Hidup"
@@ -46,7 +47,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="450dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/logogpib"/>
 
     <Button
         android:id="@+id/btn_signIn"

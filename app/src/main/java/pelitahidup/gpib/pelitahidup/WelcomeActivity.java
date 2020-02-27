@@ -18,12 +18,11 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(layout.activity_welcome);
 
         Button button = (Button) findViewById(id.btn_signIn);
-
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent gotoregisterone = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(gotoregisterone);
+                    Intent intent = new Intent(getApplicationContext(), SignInActivity.class);
+                    startActivity(intent);
                 }
             });
     }
