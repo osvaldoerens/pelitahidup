@@ -6,24 +6,32 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import static pelitahidup.gpib.pelitahidup.R.*;
 
-public class WelcomeActivity extends AppCompatActivity {
-
-    public static Button pindahMain;
+public class WelcomeActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.activity_welcome);
+        setContentView(R.layout.activity_welcome);
 
-        Button button = (Button) findViewById(id.btn_signIn);
-            button.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(getApplicationContext(), SignInActivity.class);
-                    startActivity(intent);
-                }
-            });
+        Button btnSignIn = findViewById(R.id.btn_signIn);
+        btnSignIn.setOnClickListener(this);
+
+        Button btnCreateAccount = findViewById(R.id.btn_new_account);
+        btnCreateAccount.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btn_signIn:
+                Intent moveSignIn = new Intent(WelcomeActivity.this, SignInActivity.class);
+                startActivity(moveSignIn);
+                break;
+            case R.id.btn_new_account:
+                Intent moveRegis = new Intent(WelcomeActivity.this, RegisterActivity.class);
+                startActivity(moveRegis);
+                break;
+        }
     }
 }
