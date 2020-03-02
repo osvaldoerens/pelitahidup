@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -15,6 +16,9 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
 
         Button btnWlcmSignin = findViewById(R.id.btn_welcomesignin);
         btnWlcmSignin.setOnClickListener(this);
+
+        TextView btnCreateAccount = findViewById(R.id.btn_new_account);
+        btnCreateAccount.setOnClickListener(this);
     }
 
     @Override
@@ -23,6 +27,10 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.btn_welcomesignin:
                 Intent moveMain = new Intent(SignInActivity.this, MainActivity.class);
                 startActivity(moveMain);
+                break;
+            case R.id.btn_new_account:
+                Intent moveCreateNew = new Intent(SignInActivity.this, RegisterActivity.class);
+                startActivity(moveCreateNew);
                 break;
         }
     }
