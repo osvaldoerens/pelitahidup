@@ -1,7 +1,9 @@
-package pelitahidup.gpib.pelitahidup;
+package pelitahidup.gpib.pelitahidup.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import pelitahidup.gpib.pelitahidup.R;
 
 public class WartaJemaatActivity extends AppCompatActivity {
 

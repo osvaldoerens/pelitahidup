@@ -9,23 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SbuActivity"></activity>
-        <activity android:name=".WartaJemaatActivity" />
-        <activity android:name=".InformasiActivity" />
-        <activity android:name=".DataJemaatActivity" />
-        <activity android:name=".JadwalIbadahActivity" />
-        <activity android:name=".VisiMisiActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".SignInActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Splashscreen">
+        <activity android:name=".activity.SbuActivity"></activity>
+        <activity android:name=".activity.WartaJemaatActivity" />
+        <activity android:name=".activity.InformasiActivity" />
+        <activity android:name=".activity.DataJemaatActivity" />
+        <activity android:name=".activity.JadwalIbadahActivity" />
+        <activity android:name=".activity.VisiMisiActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.SignInActivity" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".activity.WelcomeActivity" />
     </application>
 
 </manifest>

@@ -1,13 +1,13 @@
-package pelitahidup.gpib.pelitahidup;
+package pelitahidup.gpib.pelitahidup.activity;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.ButtonBarLayout;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
+
+import pelitahidup.gpib.pelitahidup.R;
 
 public class Splashscreen extends AppCompatActivity {
 

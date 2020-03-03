@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="pelitahidup.gpib.pelitahidup.WelcomeActivity">
+    tools:context="pelitahidup.gpib.pelitahidup.activity.WelcomeActivity">
 
     <View
         android:id="@+id/logogpib"
@@ -50,7 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/logogpib"/>
 
     <Button
-        android:id="@+id/btn_signIn"
+        android:id="@+id/welcomesignin"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginStart="48dp"
@@ -85,7 +85,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_signIn" />
+        app:layout_constraintTop_toBottomOf="@+id/welcomesignin" />
 
 
 </android.support.constraint.ConstraintLayout>

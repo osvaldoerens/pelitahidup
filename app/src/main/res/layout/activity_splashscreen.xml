@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="pelitahidup.gpib.pelitahidup.Splashscreen"
+    tools:context="pelitahidup.gpib.pelitahidup.activity.Splashscreen"
     android:gravity="center"
     android:background="@drawable/bg_overlay_getstarted">
 
