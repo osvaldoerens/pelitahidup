@@ -36,6 +36,8 @@ public class  MainActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
+
+        //button pindah intent
         switch (view.getId()){
             case R.id.btn_visimisi:
                 Intent btnMoveVS = new Intent(MainActivity.this, VisiMisiActivity.class);
