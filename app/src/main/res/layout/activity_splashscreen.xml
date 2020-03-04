@@ -11,7 +11,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gereja"
+        android:background="@drawable/icon_gpib"
         android:layout_marginTop="200dp"
         android:layout_marginBottom="200dp"
         android:layout_marginStart="40dp"
@@ -59,19 +59,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintCircleRadius="120dp"/>
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="90dp"
-        android:text="SELAMAT DATANG DI APLIKASI GPIB PELITA HIDUP"
-        android:textColor="#fe2529a3"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="10dp" />
 
 </android.support.constraint.ConstraintLayout>

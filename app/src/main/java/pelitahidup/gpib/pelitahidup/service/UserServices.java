@@ -10,6 +10,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 public interface UserServices {
+
     //endpoint buat ambil atau retrieve(ambil data dari database) user kan cuma getUser($id)
     @POST("user/getUser")
     //berlaku untuk ambil satu data user
@@ -21,7 +22,7 @@ public interface UserServices {
 
     //service untuk add ke database
     @FormUrlEncoded
-    @POST("user/add")
+    @POST("registrasi/registrasiLogin")
     Call<Value> tambahUser(@Field("username") String username,
                            @Field("password") String password,
                            @Field("email") String email,
@@ -29,14 +30,16 @@ public interface UserServices {
 
     @FormUrlEncoded
     @POST("user/update")
-    Call<Value> ubahUser(@Field("username") String username,
+    Call<Value> ubahUser(  @Field("id_user") Integer id_user,
+                           @Field("username") String username,
                            @Field("password") String password,
                            @Field("email") String email,
                            @Field("nomor_telepon") String nomor_telepon);
 
     @FormUrlEncoded
     @POST("user/delete")
-    Call<Value> hapusUser(@Field("username") String username,
+    Call<Value> hapusUser(@Field("id_user") Integer id_user,
+                           @Field("username") String username,
                            @Field("password") String password,
                            @Field("email") String email,
                            @Field("nomor_telepon") String nomor_telepon);

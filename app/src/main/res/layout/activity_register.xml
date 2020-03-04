@@ -56,7 +56,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/username"
+                    android:id="@+id/field_username"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@drawable/bg_input_edit"
@@ -86,7 +86,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/password"
+                    android:id="@+id/field_password"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@drawable/bg_input_edit"
@@ -116,7 +116,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/email_address"
+                    android:id="@+id/field_email"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@drawable/bg_input_edit"
@@ -146,7 +146,7 @@
                     android:textSize="20sp" />
 
                 <EditText
-                    android:id="@+id/phone_number"
+                    android:id="@+id/field_pnumber"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:background="@drawable/bg_input_edit"
