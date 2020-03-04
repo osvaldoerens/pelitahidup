@@ -7,10 +7,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class User {
 
-    @SerializedName("id")
+    @SerializedName("id_user")
     @Nullable
     @Expose
-    private int id;
+    private int id_user;
 
     @SerializedName("username")
     @Nullable
@@ -32,12 +32,12 @@ public class User {
     @Expose
     private String nomor_telepon;
 
-    public int getId() {
-        return id;
+    public int getId_user() {
+        return id_user;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
     }
 
     @Nullable
