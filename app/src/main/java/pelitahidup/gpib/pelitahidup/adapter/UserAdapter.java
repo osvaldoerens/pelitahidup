@@ -38,10 +38,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
     @NonNull
     @Override
-    public UserViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
 
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.row_user, parent, false);
+        View view = layoutInflater.inflate(R.layout.list_jemaat, parent, false);
         return new UserViewHolder(view);
     }
 
