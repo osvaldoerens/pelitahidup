@@ -8,11 +8,6 @@
     android:gravity="center"
     android:background="@drawable/bg_overlay_getstarted">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="test"/>
-
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
