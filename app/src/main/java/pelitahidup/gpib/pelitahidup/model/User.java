@@ -10,7 +10,7 @@ public class User {
     @SerializedName("id_user")
     @Nullable
     @Expose
-    private int id_user;
+    private Integer id_user;
 
     @SerializedName("username")
     @Nullable
@@ -32,11 +32,13 @@ public class User {
     @Expose
     private String nomor_telepon;
 
-    public int getId_user() {
+
+    @Nullable
+    public Integer getId_user() {
         return id_user;
     }
 
-    public void setId_user(int id_user) {
+    public void setId_user(@Nullable Integer id_user) {
         this.id_user = id_user;
     }
 
@@ -76,6 +78,11 @@ public class User {
         this.nomor_telepon = nomor_telepon;
     }
 
-
+    public User(Integer id_user, String username, String email, String nomor_telepon){
+        this.id_user = id_user;
+        this.username = username;
+        this.email = email;
+        this.nomor_telepon = nomor_telepon;
+    }
 
 }

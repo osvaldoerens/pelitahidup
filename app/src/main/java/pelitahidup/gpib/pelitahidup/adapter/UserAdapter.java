@@ -17,14 +17,12 @@ import pelitahidup.gpib.pelitahidup.model.User;
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder>{
 
     private ArrayList<User> dataList;
-
     public UserAdapter(ArrayList<User> dataList){
         this.dataList = dataList;
 
     }
 
     public class UserViewHolder extends RecyclerView.ViewHolder{
-
         private TextView txtIdUser, txtUsername, txtEmail, txtNomorTelepon;
 
         public UserViewHolder(View itemView){
@@ -39,7 +37,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.list_jemaat, parent, false);
         return new UserViewHolder(view);
@@ -47,13 +44,14 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull UserAdapter.UserViewHolder userViewHolder, int i) {
-
+        userViewHolder.txtIdUser.setText(dataList.get(i).getId_user().toString());
+        userViewHolder.txtUsername.setText(dataList.get(i).getUsername());
+        userViewHolder.txtEmail.setText(dataList.get(i).getEmail());
+        userViewHolder.txtNomorTelepon.setText(dataList.get(i).getNomor_telepon());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return (dataList != null) ? dataList.size() : 0;
     }
-
-
 }
