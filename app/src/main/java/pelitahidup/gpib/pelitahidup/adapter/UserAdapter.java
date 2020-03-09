@@ -6,19 +6,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import pelitahidup.gpib.pelitahidup.R;
 import pelitahidup.gpib.pelitahidup.model.User;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder>{
+    List<User> userList;
 
-    private ArrayList<User> dataList;
     public UserAdapter(ArrayList<User> dataList){
-        this.dataList = dataList;
+        this.userList = dataList;
+        System.out.println("User List : "+userList.size());
 
     }
 
@@ -37,21 +38,20 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.list_jemaat, parent, false);
-        return new UserViewHolder(view);
+        View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_jemaat,parent, false);
+        return new UserAdapter.UserViewHolder(mView);
     }
 
     @Override
     public void onBindViewHolder(@NonNull UserAdapter.UserViewHolder userViewHolder, int i) {
-        userViewHolder.txtIdUser.setText(dataList.get(i).getId_user().toString());
-        userViewHolder.txtUsername.setText(dataList.get(i).getUsername());
-        userViewHolder.txtEmail.setText(dataList.get(i).getEmail());
-        userViewHolder.txtNomorTelepon.setText(dataList.get(i).getNomor_telepon());
+        userViewHolder.txtIdUser.setText(userList.get(i).getId_user().toString());
+        userViewHolder.txtUsername.setText(userList.get(i).getUsername());
+        userViewHolder.txtEmail.setText(userList.get(i).getEmail());
+        userViewHolder.txtNomorTelepon.setText(userList.get(i).getNomor_telepon());
     }
 
     @Override
     public int getItemCount() {
-        return (dataList != null) ? dataList.size() : 0;
+        return (userList != null) ? userList.size() : 0;
     }
 }
