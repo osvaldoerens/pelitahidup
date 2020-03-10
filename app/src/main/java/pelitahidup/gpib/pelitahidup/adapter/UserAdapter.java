@@ -1,5 +1,6 @@
 package pelitahidup.gpib.pelitahidup.adapter;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -17,18 +18,17 @@ import pelitahidup.gpib.pelitahidup.model.User;
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder>{
     List<User> userList;
 
-    public UserAdapter(ArrayList<User> dataList){
-        this.userList = dataList;
+    public UserAdapter(List<User> userList){
+        this.userList = userList;
         System.out.println("User List : "+userList.size());
 
     }
 
     public class UserViewHolder extends RecyclerView.ViewHolder{
-        private TextView txtIdUser, txtUsername, txtEmail, txtNomorTelepon;
+        private TextView txtUsername, txtEmail, txtNomorTelepon;
 
         public UserViewHolder(View itemView){
             super(itemView);
-            txtIdUser       = (TextView) itemView.findViewById(R.id.id_user);
             txtUsername     = (TextView) itemView.findViewById(R.id.username);
             txtEmail     = (TextView) itemView.findViewById(R.id.email);
             txtNomorTelepon     = (TextView) itemView.findViewById(R.id.nomor_telepon);
@@ -43,11 +43,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserAdapter.UserViewHolder userViewHolder, int i) {
-        userViewHolder.txtIdUser.setText(userList.get(i).getId_user().toString());
+    public void onBindViewHolder(@NonNull final UserAdapter.UserViewHolder userViewHolder,final int i) {
         userViewHolder.txtUsername.setText(userList.get(i).getUsername());
         userViewHolder.txtEmail.setText(userList.get(i).getEmail());
         userViewHolder.txtNomorTelepon.setText(userList.get(i).getNomor_telepon());
+
     }
 
     @Override

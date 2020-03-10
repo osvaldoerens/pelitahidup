@@ -17,15 +17,17 @@ public interface UserServices {
     //berlaku untuk ambil satu data user
     Call<User> ambilDataUser();
 
-    @POST("user/getUser")
+    @POST("dataaktif/datapelkat/")
     //berlaku untuk ambil semua data user
     Call<UserList> ambilAllUser();
 
     //service untuk add ke database
-    //pantesan masih pake form
 
     @POST("registrasi/registrasiLogin/")
     Call<User> tambahUser(@Body User user);
+
+    @POST("registrasi/prosesLogin/")
+    Call<User> userLogin(@Body User user);
 
     @FormUrlEncoded
     @POST("user/update")
