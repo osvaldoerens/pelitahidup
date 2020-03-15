@@ -26,7 +26,7 @@ public interface UserServices {
     @POST("registrasi/registrasiLogin/")
     Call<User> tambahUser(@Body User user);
 
-    @POST("registrasi/prosesLogin/")
+    @POST("registrasi/dataLogin/")
     Call<User> userLogin(@Body User user);
 
     @FormUrlEncoded
