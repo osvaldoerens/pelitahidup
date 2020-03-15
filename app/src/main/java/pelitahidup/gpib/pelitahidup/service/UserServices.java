@@ -5,6 +5,7 @@ import pelitahidup.gpib.pelitahidup.model.User;
 import pelitahidup.gpib.pelitahidup.model.UserList;
 import pelitahidup.gpib.pelitahidup.model.Value;
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
@@ -16,17 +17,17 @@ public interface UserServices {
     //berlaku untuk ambil satu data user
     Call<User> ambilDataUser();
 
-    @POST("user/getUser")
+    @POST("dataaktif/datapelkat/")
     //berlaku untuk ambil semua data user
     Call<UserList> ambilAllUser();
 
     //service untuk add ke database
-    @FormUrlEncoded
-    @POST("registrasi/registrasiLogin")
-    Call<Value> tambahUser(@Field("username") String username,
-                           @Field("password") String password,
-                           @Field("email") String email,
-                           @Field("nomor_telepon") String nomor_telepon);
+
+    @POST("registrasi/registrasiLogin/")
+    Call<User> tambahUser(@Body User user);
+
+    @POST("registrasi/prosesLogin/")
+    Call<User> userLogin(@Body User user);
 
     @FormUrlEncoded
     @POST("user/update")

@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import pelitahidup.gpib.pelitahidup.R;
+import pelitahidup.gpib.pelitahidup.model.User;
 import pelitahidup.gpib.pelitahidup.model.Value;
 import pelitahidup.gpib.pelitahidup.presenter.Presenter;
 import retrofit2.Call;
@@ -41,11 +42,16 @@ public class RegisterActivity extends AppCompatActivity {
                 mpresenter = new Presenter();
 
                 //proses koneksi ke api
-                Call<Value> result = mpresenter.userService().tambahUser(username,password,email,nomor_telepon);
-                result.enqueue(new Callback<Value>() {
+                User user = new User();
+                user.setUsername(username);
+                user.setPassword(password);
+                user.setEmail(email);
+                user.setNomor_telepon(nomor_telepon);
+                Call<User> result = mpresenter.userService().tambahUser(user);
+                result.enqueue(new Callback<User>() {
                     @Override
-                    public void onResponse(Call<Value> call, Response<Value> response) {
-                        if (response.body().isError() == true){
+                    public void onResponse(Call<User> call, Response<User> response) {
+                        if (response.code() != 200){
                             Toast.makeText(getApplicationContext(), "Tambah Data Gagal", Toast.LENGTH_LONG).show();
                             System.out.println("Gagal Menambah data" + response);
                         }
@@ -56,9 +62,9 @@ public class RegisterActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onFailure(Call<Value> call, Throwable t) {
+                    public void onFailure(Call<User> call, Throwable t) {
                         Toast.makeText(getApplicationContext(), "Tambah Data Gagal", Toast.LENGTH_LONG).show();
-                        System.out.println("Gagal Menambah data" + t);
+                        System.out.println("Gagal Menambah data " + t);
                     }
                 });
             }

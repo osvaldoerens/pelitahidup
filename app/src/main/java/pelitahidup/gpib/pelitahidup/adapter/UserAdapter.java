@@ -1,33 +1,34 @@
 package pelitahidup.gpib.pelitahidup.adapter;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import pelitahidup.gpib.pelitahidup.R;
 import pelitahidup.gpib.pelitahidup.model.User;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder>{
+    List<User> userList;
 
-    private ArrayList<User> dataList;
-    public UserAdapter(ArrayList<User> dataList){
-        this.dataList = dataList;
+    public UserAdapter(List<User> userList){
+        this.userList = userList;
+        System.out.println("User List : "+userList.size());
 
     }
 
     public class UserViewHolder extends RecyclerView.ViewHolder{
-        private TextView txtIdUser, txtUsername, txtEmail, txtNomorTelepon;
+        private TextView txtUsername, txtEmail, txtNomorTelepon;
 
         public UserViewHolder(View itemView){
             super(itemView);
-            txtIdUser       = (TextView) itemView.findViewById(R.id.id_user);
             txtUsername     = (TextView) itemView.findViewById(R.id.username);
             txtEmail     = (TextView) itemView.findViewById(R.id.email);
             txtNomorTelepon     = (TextView) itemView.findViewById(R.id.nomor_telepon);
@@ -37,21 +38,20 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     @NonNull
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.list_jemaat, parent, false);
-        return new UserViewHolder(view);
+        View mView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_jemaat,parent, false);
+        return new UserAdapter.UserViewHolder(mView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserAdapter.UserViewHolder userViewHolder, int i) {
-        userViewHolder.txtIdUser.setText(dataList.get(i).getId_user().toString());
-        userViewHolder.txtUsername.setText(dataList.get(i).getUsername());
-        userViewHolder.txtEmail.setText(dataList.get(i).getEmail());
-        userViewHolder.txtNomorTelepon.setText(dataList.get(i).getNomor_telepon());
+    public void onBindViewHolder(@NonNull final UserAdapter.UserViewHolder userViewHolder,final int i) {
+        userViewHolder.txtUsername.setText(userList.get(i).getUsername());
+        userViewHolder.txtEmail.setText(userList.get(i).getEmail());
+        userViewHolder.txtNomorTelepon.setText(userList.get(i).getNomor_telepon());
+
     }
 
     @Override
     public int getItemCount() {
-        return (dataList != null) ? dataList.size() : 0;
+        return (userList != null) ? userList.size() : 0;
     }
 }

@@ -85,4 +85,7 @@ public class User {
         this.nomor_telepon = nomor_telepon;
     }
 
+    public User(){
+
+    }
 }
