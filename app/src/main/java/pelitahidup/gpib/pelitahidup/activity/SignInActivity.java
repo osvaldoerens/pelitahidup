@@ -45,7 +45,7 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         switch (view.getId()){
             case R.id.btn_signin:
                 User user = new User();
-                username = usernameEd.getText().toString();
+                username = usernameEdgi .getText().toString();
                 password = passwordEd.getText().toString();
                 user.setUsername(username);
                 user.setPassword(password);
