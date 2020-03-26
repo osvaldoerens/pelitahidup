@@ -151,7 +151,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/bg_input_edit"
                     android:fontFamily="@font/mmedium"
-                    android:inputType="textEmailAddress"
+                    android:inputType="number"
                     android:lines="1"
                     android:paddingLeft="12dp"
                     android:textColor="@color/blackPrimary" />

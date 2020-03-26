@@ -1,6 +1,5 @@
 package pelitahidup.gpib.pelitahidup.service;
 
-
 import pelitahidup.gpib.pelitahidup.model.User;
 import pelitahidup.gpib.pelitahidup.model.UserList;
 import pelitahidup.gpib.pelitahidup.model.Value;
@@ -22,16 +21,15 @@ public interface UserServices {
     Call<UserList> ambilAllUser();
 
     //service untuk add ke database
-
-    @POST("registrasi/registrasiLogin/")
+    @POST("user/registrasiLogin/")
     Call<User> tambahUser(@Body User user);
 
-    @POST("registrasi/dataLogin/")
+    @POST("user/prosesLogin/")
     Call<User> userLogin(@Body User user);
 
     @FormUrlEncoded
     @POST("user/update")
-    Call<Value> ubahUser(  @Field("id_user") Integer id_user,
+    Call<Value> ubahUser(@Field("id_user") Integer id_user,
                            @Field("username") String username,
                            @Field("password") String password,
                            @Field("email") String email,
